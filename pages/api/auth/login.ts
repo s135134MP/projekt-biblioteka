@@ -59,7 +59,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       ...tokens
     })
   } catch (error) {
-    console.error(error);
+    console.error("/api/auth/login", error);
 
     return res.status(500).json({ message: "Internal server error" });
   }
